@@ -5,12 +5,30 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.chatapplicationclientjavafx.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="apMain" fx:controller="com.example.chatapplicationclientjavafx.HelloController" prefHeight="396"
+            prefWidth="478"
+            xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <Button fx:id="buttonSend" layoutX="404" layoutY="338" text="Send"/>
+    </children>
+    <TextField fx:id="tfMessage" layoutX="30" layoutY="338" prefWidth="361" prefHeight="26" />
+    <ScrollPane fx:id="spMain" layoutY="70" layoutX="30" prefHeight="256" prefWidth="418" fitToWidth="true">
+        <content>
+            <VBox fx:id= "vboxMessages" prefHeight="248" prefWidth="412"/>
+        </content>
+    </ScrollPane>
+    <Label layoutX="114" layoutY="26"
+           text="Chanel's Messenger">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="23"></Font>
+        </font>
+    </Label>
+
+</AnchorPane>
